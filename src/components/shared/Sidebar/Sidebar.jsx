@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   LineStyle,
@@ -34,10 +34,10 @@ function SidebarSection({ listItemArray, sectionTitle }) {
 function SidebarListItem({ href, title, icon }) {
   return (
     <li className="sidebar__section-list-item">
-      <Link to={href} className="sidebar__section-list-item-link">
+      <NavLink to={href} className="sidebar__section-list-item-link">
         {icon}
         <span className="sidebar__section-list-item-title">{title}</span>
-      </Link>
+      </NavLink>
     </li>
   );
 }
@@ -57,8 +57,8 @@ export default function Sidebar() {
       id: 2,
       sectionTitle: "Quick Menu",
       listItemArray: [
-        { id: 1, title: "User", href: "users", icon: <PermIdentity /> },
-        { id: 2, title: "New User", href: "newuser", icon: <PeopleOutline /> },
+        { id: 1, title: "Users", href: "users", icon: <PeopleOutline/> },
+        { id: 2, title: "New User", href: "newuser", icon: <PermIdentity/> },
         { id: 3, title: "Products", href: "products", icon: <Storefront /> },
         {
           id: 4,
