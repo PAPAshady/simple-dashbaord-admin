@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LanguageIcon from "@mui/icons-material/Language";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
@@ -7,7 +8,7 @@ import "./Topbar.css";
 
 function TopBarIcon({ icon, badge }) {
   return (
-    <a href="Javascript:void(0)" className="top-bar__icon-wrapper">
+    <a href="#" className="top-bar__icon-wrapper">
       {icon}
       {badge && <span className="topbar__icon-badge">{badge}</span>}
     </a>
@@ -16,9 +17,9 @@ function TopBarIcon({ icon, badge }) {
 
 export default function Topbar() {
   const topBarIconsArray = [
-    { id: 3, icon: <NotificationsNoneIcon classes="topbar__icon" />, badge: 2 },
-    { id: 2, icon: <LanguageIcon classes="topbar__icon" />, badge: 2 },
-    { id: 1, icon: <SettingsIcon classes="topbar__icon" /> },
+    { id: 3, icon: <NotificationsNoneIcon className="topbar__icon" />, badge: 2 },
+    { id: 2, icon: <LanguageIcon className="topbar__icon" />, badge: 2 },
+    { id: 1, icon: <SettingsIcon className="topbar__icon" /> },
   ];
 
   return (
@@ -32,10 +33,15 @@ export default function Topbar() {
         {topBarIconsArray.map((topBarIcon) => (
           <TopBarIcon key={topBarIcon.id} {...topBarIcon} />
         ))}
-        <a href="Javascript:void(0)" className="top-bar__profile-pic-wrapper">
+        <a href="#" className="top-bar__profile-pic-wrapper">
           <img src={profilePic} alt="user" className="top-bar__profile-pic" />
         </a>
       </div>
     </div>
   );
 }
+
+TopBarIcon.propTypes = {
+  icon: PropTypes.element.isRequired,
+  badge: PropTypes.number,
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import {
   LineStyle,
   Timeline,
@@ -101,3 +102,14 @@ export default function Sidebar() {
     </aside>
   );
 }
+
+SidebarSection.propTypes = {
+  listItemArray: PropTypes.array.isRequired,
+  sectionTitle: PropTypes.string.isRequired,
+};
+
+SidebarListItem.proptypes = {
+  href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.element.isRequired,
+};
