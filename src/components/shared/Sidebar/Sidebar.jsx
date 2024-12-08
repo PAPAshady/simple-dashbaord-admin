@@ -57,8 +57,8 @@ export default function Sidebar() {
       id: 2,
       sectionTitle: "Quick Menu",
       listItemArray: [
-        { id: 1, title: "Users", href: "users", icon: <PeopleOutline/> },
-        { id: 2, title: "New User", href: "newuser", icon: <PermIdentity/> },
+        { id: 1, title: "Users", href: "users", icon: <PeopleOutline /> },
+        { id: 2, title: "New User", href: "newuser", icon: <PermIdentity /> },
         { id: 3, title: "Products", href: "products", icon: <Storefront /> },
         {
           id: 4,
@@ -108,7 +108,7 @@ SidebarSection.propTypes = {
   sectionTitle: PropTypes.string.isRequired,
 };
 
-SidebarListItem.proptypes = {
+SidebarListItem.propTypes = {
   href: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   icon: PropTypes.element.isRequired,
