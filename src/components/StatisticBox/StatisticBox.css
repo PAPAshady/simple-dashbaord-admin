@@ -1,0 +1,47 @@
+.statistic-box {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  flex-grow: 1;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.statistic-box__title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.statistic-box__numbers,
+.statistic-box__progress-number-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.statistic-box__numbers {
+  margin-bottom: 1rem;
+}
+
+.statistic-box__current-value {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.statistic-box__progress-number {
+  color: #666;
+}
+
+.statistic-box__arrow-icon {
+  margin-left: 0.25rem;
+}
+
+.statistic-box__arrow-icon--positive {
+  color: #006901;
+}
+
+.statistic-box__arrow-icon--negative {
+  color: #f03926;
+}
+
+.statistic-box__sub-text {
+  color: #888;
+}
