@@ -3,3 +3,9 @@
   justify-content: space-between;
   gap: 2rem;
 }
+
+.chart-wrapper {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+}

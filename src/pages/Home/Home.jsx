@@ -1,5 +1,6 @@
 import React from "react";
 import StatisticBox from "../../components/StatisticBox/StatisticBox";
+import Chart from "../../components/shared/Chart/Chart";
 import "./Home.css";
 
 function Home() {
@@ -9,12 +10,35 @@ function Home() {
     { id: 3, boxTitle: "Cost", currentValue: 2_225, prevValue: 2_172 },
   ];
 
+  const userAnalyticsChartDatas = [
+    { month: "Jan", users: 992 },
+    { month: "Feb", users: 1900 },
+    { month: "Mar", users: 1540 },
+    { month: "Apr", users: 1922 },
+    { month: "May", users: 1357 },
+    { month: "Jun", users: 2001 },
+    { month: "Jul", users: 1900 },
+    { month: "Aug", users: 1700 },
+    { month: "Sep", users: 1300 },
+    { month: "Oct", users: 1600 },
+    { month: "Nov", users: 1131 },
+    { month: "Dec", users: 802 },
+  ];
+
   return (
     <div className="sections-wrapper">
       <div className="statistic-boxes-wrapper">
         {statisticBoxesInfos.map((box) => (
           <StatisticBox key={box.id} {...box} />
         ))}
+      </div>
+      <div className="chart-wrapper">
+        <Chart
+          chartTitle="User Analytics"
+          dataArray={userAnalyticsChartDatas}
+          dataKey="users"
+          grid
+        />
       </div>
     </div>
   );
