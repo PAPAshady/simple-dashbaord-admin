@@ -1,6 +1,8 @@
 import React from "react";
 import StatisticBox from "../../components/StatisticBox/StatisticBox";
 import Chart from "../../components/shared/Chart/Chart";
+import NewJoinedUser from "../../components/NewJoinedUser/NewJoinedUser";
+import profilePic from "../../assets/images/profile-pic.webp";
 import "./Home.css";
 
 function Home() {
@@ -25,6 +27,32 @@ function Home() {
     { month: "Dec", users: 802 },
   ];
 
+  const newJoinedUsersArray = [
+    {
+      id: 1,
+      userName: "Nima Zamani",
+      userRole: "Web Developer",
+      userImg: profilePic,
+    },
+    {
+      id: 2,
+      userName: "Tina Bahrami",
+      userRole: "Scientist",
+      userImg: profilePic,
+    },
+    {
+      id: 3,
+      userName: "Akbar Zamani",
+      userRole: "Colonel",
+    },
+    {
+      id: 4,
+      userName: "Keyvan Zamani",
+      userRole: "Soldier",
+      userImg: profilePic,
+    },
+  ];
+
   return (
     <div className="sections-wrapper">
       <div className="statistic-boxes-wrapper">
@@ -39,6 +67,16 @@ function Home() {
           dataKey="users"
           grid
         />
+      </div>
+      <div className="widgets-wrapper">
+        <div className="joined-users-box">
+          <h3 className="joined-users-box__title">New Joined Members</h3>
+          <ul className="joined-users-box__wrapper">
+            {newJoinedUsersArray.map((user) => (
+              <NewJoinedUser key={user.id} {...user} />
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

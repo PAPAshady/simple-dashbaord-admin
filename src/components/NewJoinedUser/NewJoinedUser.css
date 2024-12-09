@@ -1,0 +1,38 @@
+.new-joined-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.new-joined-user__img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.new-joined-user__name{
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.new-joined-user__role{
+    font-size: .9rem;
+    font-weight: 400;
+    color: #777;
+}
+
+.new-joined-user__action-btn{
+    background-color: #eeeffb;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #56555f;
+    transition: background-color 200ms;
+}
+
+.new-joined-user__action-btn:hover{
+    background-color: #c8c9d1;
+}

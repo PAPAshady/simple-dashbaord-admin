@@ -9,3 +9,26 @@
   padding: 1.5rem;
   border-radius: 10px;
 }
+
+.widgets-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.joined-users-box {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+
+.joined-users-box__title{
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.joined-users-box__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
