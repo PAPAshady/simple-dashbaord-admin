@@ -22,13 +22,37 @@
   flex: 1;
 }
 
-.joined-users-box__title{
+.joined-users-box__title {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
-.joined-users-box__wrapper{
+.joined-users-box__wrapper {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.transactions-box {
+  flex: 2;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.transactions-box__title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.transactions-box__table {
+  width: 100%;
+}
+
+.transactions-box__table-head {
+  text-align: left;
+}
+
+.transactions-box__th {
+  margin-bottom: 1rem;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import StatisticBox from "../../components/StatisticBox/StatisticBox";
 import Chart from "../../components/shared/Chart/Chart";
 import NewJoinedUser from "../../components/NewJoinedUser/NewJoinedUser";
+import Transaction from "../../components/Transaction/Transaction";
 import profilePic from "../../assets/images/profile-pic.webp";
 import "./Home.css";
 
@@ -53,6 +54,31 @@ function Home() {
     },
   ];
 
+  const transactionsInfosArray = [
+    {
+      id: 1,
+      customerName: "Nima Zamani",
+      customerImg: profilePic,
+      date: "12 Jun 2022",
+      amount: 123,
+      status: "Approved",
+    },
+    {
+      id: 2,
+      customerName: "Keyvan Zamani",
+      date: "12 May 2012",
+      amount: 1230,
+      status: "Declined",
+    },
+    {
+      id: 3,
+      customerName: "Akbar Zamani",
+      date: "22 Jul 2002",
+      amount: 1230,
+      status: "Pending",
+    },
+  ];
+
   return (
     <div className="sections-wrapper">
       <div className="statistic-boxes-wrapper">
@@ -76,6 +102,22 @@ function Home() {
               <NewJoinedUser key={user.id} {...user} />
             ))}
           </ul>
+        </div>
+        <div className="transactions-box">
+          <h3 className="transactions-box__title">Latest Transactions</h3>
+          <table className="transactions-box__table">
+            <thead className="transactions-box__table-head">
+              <th className="transactions-box__th">Customer</th>
+              <th className="transactions-box__th">Date</th>
+              <th className="transactions-box__th">Amount</th>
+              <th className="transactions-box__th">Status</th>
+            </thead>
+            <tbody className="transactions-box__table-body">
+              {transactionsInfosArray.map((transaction) => (
+                <Transaction key={transaction.id} {...transaction} />
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

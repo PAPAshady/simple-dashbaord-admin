@@ -1,0 +1,47 @@
+.transaction {
+  margin-top: 1rem;
+}
+
+.transaction-table-cell {
+  padding-top: 1rem;
+}
+
+.transaction__customer-img-and-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.transaction__customer-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.transaction__customer-name,
+.transaction__date,
+.transaction__amount {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.transaction__status {
+  padding: 5px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.transaction__status--Approved {
+  background-color: #e5f7f4;
+  color: #90b4a1;
+}
+
+.transaction__status--Declined {
+  background-color: #fff4f2;
+  color: #c08783;
+}
+
+.transaction__status--Pending {
+  background-color: #edf3ff;
+  color: #6788c0;
+}
