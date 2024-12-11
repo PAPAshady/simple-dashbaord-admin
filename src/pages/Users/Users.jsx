@@ -8,11 +8,9 @@ import "./Users.css";
 function Users() {
   const [users, setUsers] = useState(usersArray);
   const [openSnackbar, setOpenSnackbar] = useState(false);
-  const [snackbarMessage, setSnackbarMessage] = useState("");
 
   const removeUserHandler = (userID) => {
     setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userID));
-    setSnackbarMessage("User removed successfully");
     setOpenSnackbar(true);
   };
 
@@ -76,7 +74,7 @@ function Users() {
           }}
         />
       </div>
-      <Snackbar open={openSnackbar} message={snackbarMessage} />
+      <Snackbar open={openSnackbar} message="User removed successfully" />
     </>
   );
 }
