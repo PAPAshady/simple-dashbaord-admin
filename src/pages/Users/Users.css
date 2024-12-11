@@ -1,0 +1,46 @@
+.users-table__user-name-and-img {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.users-table__img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+
+.users-table__actions {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.users-table__action-edit-btn,
+.users-table__action-remove-btn {
+  border: none;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+}
+
+.users-table__action-edit-btn {
+  background-color: #35a27a;
+  color: #fff;
+  border-radius: 7px;
+  padding: 7px 10px;
+  font-size: 0.8rem;
+}
+
+.users-table__action-edit-btn:hover {
+  background-color: #3cb98b;
+}
+
+.users-table__action-remove-btn {
+  color: #f11d08;
+}
