@@ -69,11 +69,11 @@ function Users() {
           columns={columns}
           rows={users}
           disableRowSelectionOnClick
-          // initialState={{
-          //   pagination: {
-          //     paginationModel: { pageSize: 3, page: 0 },
-          //   },
-          // }}
+          initialState={{
+            pagination: {
+              paginationModel: { pageSize: 3, page: 0 },
+            },
+          }}
         />
       </div>
       <Snackbar open={openSnackbar} message={snackbarMessage} />

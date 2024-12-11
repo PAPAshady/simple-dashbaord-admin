@@ -33,7 +33,7 @@ function Transaction({
 
 Transaction.propTypes = {
   customerName: PropTypes.string.isRequired,
-  customerImg: PropTypes.string.isRequired,
+  customerImg: PropTypes.string,
   date: PropTypes.string.isRequired,
   amount: PropTypes.number.isRequired,
   status: PropTypes.string.isRequired,
